@@ -1,0 +1,29 @@
+{
+  "name": "par",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -p 1234",
+    "build": "parcel build index.html --no-cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.9.1"
+  },
+  "dependencies": {
+    "game": "^1.0.3",
+    "hoek": "^5.0.3",
+    "phaser": "^3.14.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "scss": "^0.2.4"
+  }
+}

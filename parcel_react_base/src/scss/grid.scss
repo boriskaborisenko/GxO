@@ -1,0 +1,126 @@
+$bg: #1f2137 ;
+
+html,body{
+    background: $bg; 
+    font-family: 'Vox_Wide_SemiBold';
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    position:relative;
+    -webkit-text-size-adjust: 100%;
+    overflow:hidden;
+}
+
+#root{
+    width:100%;
+    height:100%;
+    position:relative;
+    background:rgba(0,0,0,0.0);
+}
+
+#particles{
+    position:absolute;
+    z-index:5;
+    width:100%;
+    height:100%;
+}
+#particles-js{
+    background-size:cover;
+    background-repeat:none;
+    background-position: 50% 50%;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    //background:orange;
+}
+
+#game{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:10;
+}
+
+#site{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:20;
+    background:rgba(255,255,255,0.0);
+    overflow:hidden;
+}
+
+.innersite{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:rgba(255,255,255,0.0);
+  text-align:center;
+  width:100%;
+}
+
+.inmiddle{
+    //background:red;
+    width:80%;
+    margin:0 auto;
+}
+
+.logo{
+    width:90px;
+    height:auto;
+    margin: 0 auto;
+}
+
+.logo img{
+    width:90px;
+    height:auto;
+    margin: 0 auto;
+}
+
+.logotext{
+    color:#69CD78;
+    font-family:'Roboto_Mono_Regular';
+    font-size:0.8rem;
+    width:100%;
+    //background:olive;
+}
+
+.title{
+    color:#7C85C9;
+    font-family:'Vox_Wide_Bold';
+    font-size:5rem;
+    margin:80px auto;
+}
+
+
+@media screen and (min-width:320px) and (max-width:724px) {
+    .logo{
+        width:90px;
+        height:auto;
+        margin: 0 auto;
+    }
+    
+    .logo img{
+        width:90px;
+        height:auto;
+        margin: 0 auto;
+    }
+    .title{
+        color:#7C85C9;
+        font-family:'Vox_Wide_Bold';
+        font-size:3rem;
+        margin:36% auto;
+    }
+    .hm{display:none;}
+    
+}
+
+
