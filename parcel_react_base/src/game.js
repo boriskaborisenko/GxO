@@ -1,8 +1,15 @@
+import 'phaser';
+
+var game;
+
+function newGame(){
+
 var config = {
     type: Phaser.AUTO,
     width: 800,
-    height: 600,
-    parent: 'game',
+    height: 560,
+    parent: 'gamebox',
+    background: '#ff303f',
     physics: {
         default: 'arcade',
         arcade: {
@@ -27,7 +34,7 @@ var score = 0;
 var gameOver = false;
 var scoreText;
 
-var game = new Phaser.Game(config);
+game = new Phaser.Game(config);
 
 function preload ()
 {
@@ -40,15 +47,25 @@ function preload ()
 
 function create ()
 {
+    //  A simple background for our game
     this.add.image(400, 300, 'sky');
+
+    //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = this.physics.add.staticGroup();
+
+    //  Here we create the ground.
+    //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
+    //  Now let's create some ledges
     platforms.create(600, 400, 'ground');
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');
 
+    // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
+
+    //  Player physics properties. Give the little guy a slight bounce.
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
 
@@ -84,11 +101,16 @@ function create ()
     });
 
     stars.children.iterate(function (child) {
+
+        //  Give each star a slightly different bounce
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
     });
 
     bombs = this.physics.add.group();
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    //  The score
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#3f51b5', fontFamily: 'Vox_Wide_Bold' });
 
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
@@ -171,3 +193,41 @@ function hitBomb (player, bomb)
 
     gameOver = true;
 }
+
+
+
+}
+
+const playGame = document.getElementById('play'); 
+playGame.addEventListener('click', playGameHandler, false);
+
+const stopGame = document.getElementById('end'); 
+stopGame.addEventListener('click', stopGameHandler, false);
+
+const restartGame = document.getElementById('restart'); 
+restartGame.addEventListener('click', restartGameHandler, false);
+
+function playGameHandler(evt){
+    console.log('start gamexx');
+    newGame();
+    document.getElementById('btn').style.opacity = '0.5';
+    document.getElementById('backsoon').style.visibility = 'hidden';
+    document.getElementById('play').style.display = 'none';
+    document.getElementById('gamecontrols').style.display = 'block';
+}
+
+function stopGameHandler(evt){
+    game.destroy();
+    document.getElementById('gamebox').innerHTML =  '';
+    document.getElementById('btn').style.opacity = '1';
+    document.getElementById('backsoon').style.visibility = 'visible';
+    document.getElementById('play').style.display = 'block';
+    document.getElementById('gamecontrols').style.display = 'none';
+}
+
+function restartGameHandler(evt){
+    game.destroy();
+    document.getElementById('gamebox').innerHTML =  '';
+    newGame();
+}
+

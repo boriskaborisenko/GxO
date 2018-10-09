@@ -84,6 +84,7 @@
   transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
   color: #ECEFF1;
   background-color: #3f51b5;
+  opacity: 1;
   -webkit-animation: anim-moema-1 0.3s forwards;
   animation: anim-moema-1 0.3s forwards; }
 
@@ -137,8 +138,7 @@ html, body {
   width: 100%;
   height: 100%;
   position: relative;
-  -webkit-text-size-adjust: 100%;
-  overflow: hidden; }
+  -webkit-text-size-adjust: 100%; }
 
 #root {
   width: 100%;
@@ -164,7 +164,46 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 10; }
+  z-index: 20;
+  background: rgba(255, 0, 0, 0); }
+
+#gamebox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+
+#gamecontrols {
+  position: fixed;
+  z-index: 100500;
+  left: 50%;
+  top: 50%;
+  /*background:red;*/
+  margin-top: -264px;
+  margin-left: 150px;
+  display: none; }
+
+.gc {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  border-radius: 1000px;
+  background: #202136;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 4px 18px 2px 18px;
+  color: #229fff;
+  cursor: pointer; }
+
+.gc:first-child {
+  margin-right: 20px; }
+
+.game_anno {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center; }
 
 #site {
   position: absolute;
@@ -214,6 +253,11 @@ html, body {
   font-size: 5rem;
   margin: 80px auto; }
 
+#play {
+  color: #3f51b5;
+  cursor: pointer;
+  margin-top: 10px; }
+
 @media screen and (min-width: 320px) and (max-width: 724px) {
   .logo {
     width: 90px;
@@ -227,6 +271,8 @@ html, body {
     color: #7C85C9;
     font-family: 'Vox_Wide_Bold';
     font-size: 3rem;
-    margin: 36% auto; }
+    margin: 26% auto 10% auto; }
   .hm {
+    display: none; }
+  #play {
     display: none; } }

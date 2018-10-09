@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'node_modules',
+1 verbose cli   '--save' ]
+2 info using npm@6.4.1
+3 info using node@v8.9.4
+4 verbose npm-session 083bdadf3e838443
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData error for node_modules Parameter "url" must be a string, not undefined
+8 timing stage:rollbackFailedOptional Completed in 11ms
+9 timing stage:runTopLevelLifecycles Completed in 7570ms
+10 verbose stack TypeError: Parameter "url" must be a string, not undefined
+10 verbose stack     at Url.parse (url.js:103:11)
+10 verbose stack     at urlParse (url.js:97:13)
+10 verbose stack     at Url.resolve (url.js:654:29)
+10 verbose stack     at Object.urlResolve [as resolve] (url.js:650:40)
+10 verbose stack     at metadataUrl (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/fetchers/registry/manifest.js:33:14)
+10 verbose stack     at manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/fetchers/registry/manifest.js:22:15)
+10 verbose stack     at Object.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/fetchers/registry/index.js:12:12)
+10 verbose stack     at Object.Fetcher#manifest [as manifest] (/usr/local/lib/node_modules/npm/node_modules/genfun/lib/genfun.js:15:38)
+10 verbose stack     at manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/fetch.js:16:18)
+10 verbose stack     at pinflight (/usr/local/lib/node_modules/npm/node_modules/pacote/manifest.js:24:12)
+10 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/promise-inflight/inflight.js:29:24
+10 verbose stack     at _inflight (/usr/local/lib/node_modules/npm/node_modules/promise-inflight/inflight.js:28:25)
+10 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/promise-inflight/inflight.js:22:14
+10 verbose stack From previous event:
+10 verbose stack     at inflight (/usr/local/lib/node_modules/npm/node_modules/promise-inflight/inflight.js:14:40)
+10 verbose stack     at Object.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/manifest.js:22:10)
+10 verbose stack     at fetchPackageMetadata (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:58:10)
+10 verbose stack     at limited (/usr/local/lib/node_modules/npm/node_modules/call-limit/call-limit.js:29:10)
+10 verbose stack     at fs.stat (/usr/local/lib/node_modules/npm/lib/install/deps.js:224:20)
+10 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:284:29
+10 verbose stack     at FSReqWrap.oncomplete (fs.js:152:21)
+11 verbose cwd /Users/boriskaborisenko/Desktop/and/parcel_react_base
+12 verbose Darwin 17.7.0
+13 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "node_modules" "--save"
+14 verbose node v8.9.4
+15 verbose npm  v6.4.1
+16 error Parameter "url" must be a string, not undefined
+17 verbose exit [ 1, true ]
