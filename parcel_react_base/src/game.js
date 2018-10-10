@@ -210,7 +210,7 @@ restartGame.addEventListener('click', restartGameHandler, false);
 function playGameHandler(evt){
     console.log('start gamexx');
     newGame();
-    document.getElementById('btn').style.opacity = '0.5';
+    document.getElementById('btn').style.opacity = '0';
     document.getElementById('backsoon').style.visibility = 'hidden';
     document.getElementById('play').style.display = 'none';
     document.getElementById('gamecontrols').style.display = 'block';
