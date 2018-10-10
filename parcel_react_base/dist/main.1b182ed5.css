@@ -56,8 +56,9 @@
 /* Moema */
 .button--moema {
   border-radius: 50px;
-  background: #7986cb;
-  color: #fff;
+  background: transparent;
+  color: #69CD78;
+  border: 2px solid #69CD78;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s; }
 
@@ -83,7 +84,7 @@
   -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
   transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
   color: #ECEFF1;
-  background-color: #3f51b5;
+  background-color: #69CD78;
   opacity: 1;
   -webkit-animation: anim-moema-1 0.3s forwards;
   animation: anim-moema-1 0.3s forwards; }
@@ -131,7 +132,7 @@
     transform: scale3d(1, 1, 1); } }
 
 html, body {
-  background: #1f2137;
+  background: #ffffff;
   font-family: 'Vox_Wide_SemiBold';
   margin: 0;
   padding: 0;
@@ -180,7 +181,7 @@ html, body {
   left: 50%;
   top: 50%;
   /*background:red;*/
-  margin-top: -264px;
+  margin-top: -270px;
   margin-left: 150px;
   display: none; }
 
@@ -193,7 +194,7 @@ html, body {
   box-sizing: border-box;
   font-size: 12px;
   padding: 4px 18px 2px 18px;
-  color: #229fff;
+  color: #69CD78;
   cursor: pointer; }
 
 .gc:first-child {
@@ -232,12 +233,12 @@ html, body {
   margin: 0 auto; }
 
 .logo {
-  width: 90px;
+  width: 110px;
   height: auto;
   margin: 0 auto; }
 
 .logo img {
-  width: 90px;
+  width: 110px;
   height: auto;
   margin: 0 auto; }
 
@@ -248,30 +249,46 @@ html, body {
   width: 100%; }
 
 .title {
-  color: #7C85C9;
+  color: #4A4A4A;
   font-family: 'Vox_Wide_Bold';
-  font-size: 5rem;
-  margin: 80px auto; }
+  font-size: 3rem;
+  line-height: 4rem;
+  margin: 80px auto;
+  text-transform: uppercase; }
 
 #play {
-  color: #3f51b5;
+  color: #69CD78;
+  display: inline-block;
   cursor: pointer;
-  margin-top: 10px; }
+  margin-top: 7px;
+  font-family: 'Roboto_Mono_Bold';
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent; }
+
+#play:hover {
+  border-bottom: 2px solid #69CD78; }
+
+.or {
+  color: #69CD78;
+  font-family: 'Roboto_Mono_Regular'; }
 
 @media screen and (min-width: 320px) and (max-width: 724px) {
   .logo {
-    width: 90px;
+    width: 110px;
     height: auto;
     margin: 0 auto; }
+  .or {
+    display: none; }
   .logo img {
-    width: 90px;
+    width: 110px;
     height: auto;
     margin: 0 auto; }
   .title {
-    color: #7C85C9;
+    color: #4A4A4A;
     font-family: 'Vox_Wide_Bold';
-    font-size: 3rem;
-    margin: 26% auto 10% auto; }
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    margin: 30% auto 15% auto; }
   .hm {
     display: none; }
   #play {

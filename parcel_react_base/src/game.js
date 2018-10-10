@@ -7,9 +7,9 @@ function newGame(){
 var config = {
     type: Phaser.AUTO,
     width: 800,
-    height: 560,
+    height: 580,
     parent: 'gamebox',
-    background: '#ff303f',
+    backgroundColor: '#fafbfc',
     physics: {
         default: 'arcade',
         arcade: {
@@ -110,7 +110,7 @@ function create ()
     bombs = this.physics.add.group();
 
     //  The score
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#3f51b5', fontFamily: 'Vox_Wide_Bold' });
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#202136', fontFamily: 'Vox_Wide_Bold' });
 
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
@@ -211,6 +211,7 @@ function playGameHandler(evt){
     console.log('start gamexx');
     newGame();
     document.getElementById('btn').style.opacity = '0';
+    document.getElementById('or').style.opacity = '0';
     document.getElementById('backsoon').style.visibility = 'hidden';
     document.getElementById('play').style.display = 'none';
     document.getElementById('gamecontrols').style.display = 'block';
@@ -219,6 +220,7 @@ function playGameHandler(evt){
 function stopGameHandler(evt){
     game.destroy();
     document.getElementById('gamebox').innerHTML =  '';
+    document.getElementById('or').style.opacity = '1';
     document.getElementById('btn').style.opacity = '1';
     document.getElementById('backsoon').style.visibility = 'visible';
     document.getElementById('play').style.display = 'block';

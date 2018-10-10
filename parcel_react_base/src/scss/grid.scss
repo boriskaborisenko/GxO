@@ -1,4 +1,4 @@
-$bg: #1f2137 ;
+$bg: #ffffff ;
 
 html,body{
     background: $bg; 
@@ -56,7 +56,7 @@ html,body{
     left:50%;
     top:50%;
     /*background:red;*/
-    margin-top:-264px;
+    margin-top:-270px;
     margin-left:150px;
     display:none;
 }
@@ -70,7 +70,7 @@ html,body{
     box-sizing:border-box;
     font-size:12px;
     padding:4px 18px 2px 18px;
-    color:#229fff;
+    color:#69CD78;
     cursor:pointer;
 }
 .gc:first-child{
@@ -115,13 +115,13 @@ html,body{
 }
 
 .logo{
-    width:90px;
+    width:110px;
     height:auto;
     margin: 0 auto;
 }
 
 .logo img{
-    width:90px;
+    width:110px;
     height:auto;
     margin: 0 auto;
 }
@@ -135,36 +135,56 @@ html,body{
 }
 
 .title{
-    color:#7C85C9;
+    color:#4A4A4A;
     font-family:'Vox_Wide_Bold';
-    font-size:5rem;
+    font-size:3rem;
+    line-height:4rem;
     margin:80px auto;
+    text-transform:uppercase;
 }
 
 #play{
-    color:#3f51b5;
+    color:#69CD78;
+    display:inline-block;
     cursor:pointer;
-    margin-top:10px;
+    margin-top:7px;
+    font-family:'Roboto_Mono_Bold';
+    padding-bottom:2px;
+    border-bottom:2px solid transparent;
+    
+}
+#play:hover{
+    border-bottom:2px solid #69CD78;
+}
+
+.or{
+    color:#69CD78;
+    font-family:'Roboto_Mono_Regular';
 }
 
 
 @media screen and (min-width:320px) and (max-width:724px) {
     .logo{
-        width:90px;
+        width:110px;
         height:auto;
         margin: 0 auto;
     }
+
+    .or{
+        display:none;
+    }
     
     .logo img{
-        width:90px;
+        width:110px;
         height:auto;
         margin: 0 auto;
     }
     .title{
-        color:#7C85C9;
+        color:#4A4A4A;
         font-family:'Vox_Wide_Bold';
-        font-size:3rem;
-        margin:26% auto 10% auto;
+        font-size:1.6rem;
+        line-height:2.1rem;
+        margin:30% auto 15% auto;
     }
     .hm{display:none;}
 
